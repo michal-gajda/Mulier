@@ -1,0 +1,14 @@
+<Project>
+
+  <PropertyGroup>
+    <Authors>Michal Gajda</Authors>
+    <ProductName>Mulier</ProductName>
+    <TargetFramework>net8.0</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NoWarn>S2094;</NoWarn>
+  </PropertyGroup>
+
+</Project>

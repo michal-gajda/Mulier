@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mulier.Domain", "Domain\Mulier.Domain.csproj", "{9A849842-6A5D-4724-BAD9-17EB8C94C2E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mulier.Application", "Application\Mulier.Application.csproj", "{0B4673A5-DE40-4C5F-83BB-0631B70B3B29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mulier.Infrastructure", "Infrastructure\Mulier.Infrastructure.csproj", "{BD51A4AF-4FEC-4E24-BDFB-D78CE01599BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{9A849842-6A5D-4724-BAD9-17EB8C94C2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A849842-6A5D-4724-BAD9-17EB8C94C2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A849842-6A5D-4724-BAD9-17EB8C94C2E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4673A5-DE40-4C5F-83BB-0631B70B3B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4673A5-DE40-4C5F-83BB-0631B70B3B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4673A5-DE40-4C5F-83BB-0631B70B3B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4673A5-DE40-4C5F-83BB-0631B70B3B29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD51A4AF-4FEC-4E24-BDFB-D78CE01599BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD51A4AF-4FEC-4E24-BDFB-D78CE01599BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD51A4AF-4FEC-4E24-BDFB-D78CE01599BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD51A4AF-4FEC-4E24-BDFB-D78CE01599BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
