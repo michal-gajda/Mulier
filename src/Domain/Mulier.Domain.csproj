@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Using Include="Mulier.Domain.Types" />
+  </ItemGroup>
+
 </Project>
