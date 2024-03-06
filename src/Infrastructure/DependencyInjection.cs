@@ -2,7 +2,7 @@
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Mulier.Infrastructure.LiteDB;
+using Mulier.Infrastructure.LiteDb;
 
 public static class DependencyInjection
 {
@@ -11,7 +11,7 @@ public static class DependencyInjection
         var assembly = System.Reflection.Assembly.GetExecutingAssembly();
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
 
-        services.AddLiteDB(configuration);
+        services.AddLiteDb(configuration);
 
         return services;
     }
