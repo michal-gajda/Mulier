@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mulier-app-deployment
+  annotations:
+    kubernetes.io/change-couse: "Initional deployment of the app"
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: mulier-app
+  template:
+    metadata:
+      name: mulierk8s
+      labels:
+        evn: prod
+        app: mulier-app
+        app.kubernetes.io/name: mulier-app
+    spec:
+      containers:
+        - name: mulierapp
+          image: gajdaltd/mulier:latest
+          ports:
+            - containerPort: 5080
+              name: http-web-api
+          startupProbe:
+            httpGet:
+              path: /health
+              port: 5080
+            failureThreshold: 30
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 200m
+              memory: 200Mi
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Development
+            - name: LITEDB__FILENAME
+              value: /app/data/mulier.db
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mulier-app-service
+spec:
+  selector:
+    app.kubernetes.io/name: mulier-app
+  ports:
+    - name: mulier-app-port
+      protocol: TCP
+      port: 8080
+      targetPort: 5080
+  type: LoadBalancer
