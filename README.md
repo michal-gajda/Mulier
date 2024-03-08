@@ -8,7 +8,6 @@ networks:
     driver: bridge
 services:
   hermes:
-    build: .
     image: gajdaltd/mulier:latest
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
