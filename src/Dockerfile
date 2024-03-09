@@ -26,6 +26,6 @@ EXPOSE 5080
 
 COPY --chown=dotnet:dotnet --from=build /app/build .
 
-HEALTHCHECK --interval=5s --timeout=10s --retries=3 CMD curl --fail http://localhost:5080/health || exit 1
+HEALTHCHECK --interval=5s --timeout=10s --retries=3 CMD curl --fail http://localhost:5080/health || exit
 
 ENTRYPOINT ["dotnet", "Mulier.WebApi.dll"]
