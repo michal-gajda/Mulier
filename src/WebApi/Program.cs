@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Mvc;
 using Mulier.Application;
+using Mulier.Application.ToDos.Commands;
 using Mulier.Infrastructure;
 using Mulier.WebApi;
 
@@ -26,6 +28,14 @@ var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching",
 };
+
+app.MapPost("/todo", async ([FromBody] CreateToDo command, [FromServices] ISender mediator, CancellationToken cancellationToken = default) => await mediator.Send(command, cancellationToken))
+    .WithName("create")
+    .WithOpenApi();
+
+app.MapPost("/todoitem", async ([FromBody] AddToDoItem command, [FromServices] ISender mediator, CancellationToken cancellationToken = default) => await mediator.Send(command, cancellationToken))
+    .WithName("add")
+    .WithOpenApi();
 
 app.MapGet("/weatherforecast", () =>
     {
