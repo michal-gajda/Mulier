@@ -3,6 +3,7 @@ namespace Mulier.Application.ToDos.CommandHandlers;
 using Mulier.Application.Common.Interfaces;
 using Mulier.Application.ToDos.Commands;
 using Mulier.Domain.Entities;
+using Mulier.Domain.Exceptions;
 using Mulier.Domain.Interfaces;
 
 internal sealed class AddToDoItemHandler : IRequestHandler<AddToDoItem>
@@ -23,7 +24,7 @@ internal sealed class AddToDoItemHandler : IRequestHandler<AddToDoItem>
 
         if (toDo is null)
         {
-            throw new NullReferenceException();
+            throw new ToDoNotFoundException(id);
         }
 
         var toDoItemId = new ToDoItemId(this.idProvider.GetId());

@@ -1,5 +1,7 @@
 namespace Mulier.Domain.Entities;
 
+using Mulier.Domain.Exceptions;
+
 public sealed class ToDoEntity
 {
     private readonly Dictionary<ToDoItemId, ToDoItemEntity> items = new();
@@ -18,9 +20,14 @@ public sealed class ToDoEntity
         this.items[entity.Id] = entity;
     }
 
-    public void RemoveToDoItem(ToDoItemId id)
+    public void RemoveToDoItem(ToDoItemId itemId)
     {
-        this.items.Remove(id);
+        if (this.items.ContainsKey(itemId) is false)
+        {
+            throw new ToDoItemNotFoundException(itemId);
+        }
+
+        this.items.Remove(itemId);
     }
 
     public void SetTile(string title)
