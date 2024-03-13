@@ -1,5 +1,7 @@
 namespace Mulier.Domain.Entities;
 
+using Mulier.Domain.Exceptions;
+
 public sealed class ToDoItemEntity
 {
     public ToDoItemEntity(ToDoItemId id, string title, string description, DateTime? expirationDateTime = default)
@@ -28,6 +30,13 @@ public sealed class ToDoItemEntity
 
     public void SetTitle(string title)
     {
+        var trimmedName = title.Trim();
+
+        if (string.IsNullOrWhiteSpace(trimmedName))
+        {
+            throw new InvalidTitleException(title);
+        }
+
         this.Title = title;
     }
 

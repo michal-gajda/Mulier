@@ -19,7 +19,7 @@ public sealed class IngredientEntity
 
         if (string.IsNullOrWhiteSpace(trimmedName))
         {
-            throw new InvalidNameException();
+            throw new InvalidNameException(name);
         }
 
         this.Name = trimmedName;

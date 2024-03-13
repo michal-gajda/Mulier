@@ -32,6 +32,13 @@ public sealed class ToDoEntity
 
     public void SetTile(string title)
     {
+        var trimmedName = title.Trim();
+
+        if (string.IsNullOrWhiteSpace(trimmedName))
+        {
+            throw new InvalidTitleException(title);
+        }
+
         this.Title = title;
     }
 }
