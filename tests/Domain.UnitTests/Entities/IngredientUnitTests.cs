@@ -93,7 +93,7 @@ public sealed class IngredientUnitTests
     }
 
     [TestMethod]
-    public void Should_Set_New_Name()
+    public void Should_Set_New_Title()
     {
         //Arrange
         var id = Guid.NewGuid();
