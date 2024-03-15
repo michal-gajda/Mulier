@@ -12,10 +12,10 @@ public sealed class IngredientUnitTests
         //Arrange
         var id = Guid.NewGuid();
         var ingredientId = new IngredientId(id);
-        var name = "name";
+        var title = "name";
 
         //Act
-        var sut = new Ingredient(ingredientId, name);
+        var sut = new IngredientEntity(ingredientId, title);
 
         //Assets
         sut.Should()
@@ -26,8 +26,8 @@ public sealed class IngredientUnitTests
             .Be(ingredientId)
             ;
 
-        sut.Name.Should()
-            .Be(name)
+        sut.Title.Should()
+            .Be(title)
             ;
     }
 
@@ -37,13 +37,13 @@ public sealed class IngredientUnitTests
         //Arrange
         var id = Guid.NewGuid();
         var ingredientId = new IngredientId(id);
-        var name = " name ";
+        var title = " name ";
 
         //Act
-        var sut = new Ingredient(ingredientId, name);
+        var sut = new IngredientEntity(ingredientId, title);
 
         //Assets
-        var trimmedName = "name";
+        var trimmedTitle = "name";
 
         sut.Should()
             .NotBeNull()
@@ -53,42 +53,42 @@ public sealed class IngredientUnitTests
             .Be(ingredientId)
             ;
 
-        sut.Name.Should()
-            .Be(trimmedName)
+        sut.Title.Should()
+            .Be(trimmedTitle)
             ;
     }
 
     [TestMethod, DataRow(""), DataRow("   ")]
-    public void Should_Not_Create_Ingredient_with_Empty_Name(string name)
+    public void Should_Not_Create_Ingredient_with_Empty_Title(string title)
     {
         //Arrange
         var id = Guid.NewGuid();
         var ingredientId = new IngredientId(id);
 
         //Act
-        var sut = () => new Ingredient(ingredientId, name);
+        var sut = () => new IngredientEntity(ingredientId, title);
 
         //Assets
         sut.Should()
-            .Throw<InvalidNameException>()
+            .Throw<InvalidTitleException>()
             ;
     }
 
     [TestMethod, DataRow(""), DataRow("   ")]
-    public void Should_Not_Set_Empty_Name(string newName)
+    public void Should_Not_Set_Empty_Title(string newTitle)
     {
         //Arrange
         var id = Guid.NewGuid();
         var ingredientId = new IngredientId(id);
-        var originalName = "original";
-        var ingredient = new Ingredient(ingredientId, originalName);
+        var oldTitle = "original";
+        var ingredient = new IngredientEntity(ingredientId, oldTitle);
 
         //Act
-        var sut = () => ingredient.SetName(newName);
+        var sut = () => ingredient.SetTitle(newTitle);
 
         //Assets
         sut.Should()
-            .Throw<InvalidNameException>()
+            .Throw<InvalidTitleException>()
             ;
     }
 
@@ -98,12 +98,12 @@ public sealed class IngredientUnitTests
         //Arrange
         var id = Guid.NewGuid();
         var ingredientId = new IngredientId(id);
-        var originalName = "original";
-        var newName = "new";
-        var sut = new Ingredient(ingredientId, originalName);
+        var oldTitle = "original";
+        var newTitle = "new";
+        var sut = new IngredientEntity(ingredientId, oldTitle);
 
         //Act
-        sut.SetName(newName);
+        sut.SetTitle(newTitle);
 
         //Assets
         sut.Should()
@@ -114,8 +114,8 @@ public sealed class IngredientUnitTests
             .Be(ingredientId)
             ;
 
-        sut.Name.Should()
-            .Be(newName)
+        sut.Title.Should()
+            .Be(newTitle)
             ;
     }
 }

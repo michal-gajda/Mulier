@@ -10,13 +10,13 @@ internal sealed class IngredientRepository : IIngredientRepository
 
     public IngredientRepository(LiteDbOptions options)
     {
-    var parts = new[]
-    {
-        new KeyValuePair<string, string>("Filename", options.FileName),
-        new KeyValuePair<string, string>("Connection", nameof(LiteDB.ConnectionType.Shared)),
-    };
+        var parts = new[]
+        {
+            new KeyValuePair<string, string>("Filename", options.FileName),
+            new KeyValuePair<string, string>("Connection", nameof(LiteDB.ConnectionType.Shared)),
+        };
 
-    this.connectionString = string.Join(";", parts.Select(part => $"{part.Key}={part.Value}"));
+        this.connectionString = string.Join(";", parts.Select(part => $"{part.Key}={part.Value}"));
     }
 
     public Task CreateAsync(IngredientEntity entity, CancellationToken cancellationToken = default)

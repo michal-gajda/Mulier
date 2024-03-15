@@ -5,23 +5,23 @@ using Mulier.Domain.Exceptions;
 public sealed class IngredientEntity
 {
     public IngredientId Id { get; private init; }
-    public string Name { get; private set; } = string.Empty;
+    public string Title { get; private set; } = string.Empty;
 
-    public IngredientEntity(IngredientId id, string name)
+    public IngredientEntity(IngredientId id, string title)
     {
         this.Id = id;
-        this.SetName(name);
+        this.SetTitle(title);
     }
 
-    public void SetName(string name)
+    public void SetTitle(string name)
     {
         var trimmedName = name.Trim();
 
         if (string.IsNullOrWhiteSpace(trimmedName))
         {
-            throw new InvalidNameException(name);
+            throw new InvalidTitleException(name);
         }
 
-        this.Name = trimmedName;
+        this.Title = trimmedName;
     }
 }
