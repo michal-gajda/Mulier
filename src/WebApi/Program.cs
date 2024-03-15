@@ -36,7 +36,7 @@ app.MapPost("/todo", async ([FromBody] CreateToDo command, [FromServices] ISende
     .WithOpenApi();
 
 app.MapPut("/todoitem", async ([FromBody] ChangeToDoItem command, [FromServices] ISender mediator, CancellationToken cancellationToken = default) => await mediator.Send(command, cancellationToken))
-    .WithName("remove")
+    .WithName("change")
     .WithOpenApi();
 
 app.MapDelete("/todoitem", async ([FromQuery] Guid id, [FromQuery] Guid itemId, [FromServices] ISender mediator, CancellationToken cancellationToken = default) => await mediator.Send(new RemoveToDoItem { Id = id, ItemId = itemId, }, cancellationToken))
