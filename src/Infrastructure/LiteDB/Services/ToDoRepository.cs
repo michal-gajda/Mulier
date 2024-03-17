@@ -6,6 +6,19 @@ using Mulier.Domain.Types;
 
 internal sealed class ToDoRepository : IToDoRepository
 {
+    private readonly string connectionString;
+
+    public ToDoRepository(LiteDbOptions options)
+    {
+        var parts = new[]
+        {
+            new KeyValuePair<string, string>("Filename", options.FileName),
+            new KeyValuePair<string, string>("Connection", nameof(LiteDB.ConnectionType.Shared)),
+        };
+
+        this.connectionString = string.Join(";", parts.Select(part => $"{part.Key}={part.Value}"));
+    }
+
     public Task CreateAsync(ToDoEntity entity, CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
