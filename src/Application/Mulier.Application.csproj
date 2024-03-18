@@ -30,8 +30,4 @@
     <ProjectReference Include="..\Domain\Mulier.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ShoppingLists\Queries\" />
-  </ItemGroup>
-
 </Project>
