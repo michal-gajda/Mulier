@@ -9,11 +9,13 @@
   <ItemGroup>
     <Using Include="MediatR" />
     <Using Include="Microsoft.Extensions.Logging" />
+    <Using Include="Mulier.Domain.Types" />
   </ItemGroup>
 
   <ItemGroup>
     <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
     <PackageReference Include="Hangfire.AspNetCore" Version="1.8.11" />
+    <PackageReference Include="Hangfire.LiteDB" Version="0.4.1" />
     <PackageReference Include="LiteDB" Version="5.0.19" />
     <InternalsVisibleTo Include="Mulier.Infrastructure.UnitTests" />
   </ItemGroup>
@@ -24,6 +26,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Application\Mulier.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="LiteDB\Profiles\" />
   </ItemGroup>
 
 </Project>

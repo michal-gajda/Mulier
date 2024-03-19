@@ -9,7 +9,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddLiteDb(this IServiceCollection services, IConfiguration configuration)
     {
-        var options = configuration.GetSection(LiteDbOptions.SectionName).Get<LiteDbOptions>(); ;
+        var options = configuration.GetSection(LiteDbOptions.SectionName).Get<LiteDbOptions>();
         options ??= new LiteDbOptions();
         services.AddSingleton(options);
 

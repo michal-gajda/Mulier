@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mulier.WebApi", "..\src\Web
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mulier.Application.UnitTests", "Application.UnitTests\Mulier.Application.UnitTests.csproj", "{B2860496-2605-406E-9858-DD0CF10F6594}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mulier.Infrastructure.UnitTests", "Infrastructure.UnitTests\Mulier.Infrastructure.UnitTests.csproj", "{07AFB67F-EB76-445A-99F9-C8D877831F89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{B2860496-2605-406E-9858-DD0CF10F6594}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2860496-2605-406E-9858-DD0CF10F6594}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2860496-2605-406E-9858-DD0CF10F6594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07AFB67F-EB76-445A-99F9-C8D877831F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07AFB67F-EB76-445A-99F9-C8D877831F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07AFB67F-EB76-445A-99F9-C8D877831F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07AFB67F-EB76-445A-99F9-C8D877831F89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

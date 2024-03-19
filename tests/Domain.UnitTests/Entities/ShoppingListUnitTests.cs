@@ -1,7 +1,7 @@
+namespace Mulier.Domain.UnitTests.Entities;
+
 using Mulier.Domain.Entities;
 using Mulier.Domain.Exceptions;
-
-namespace Mulier.Domain.UnitTests.Entities;
 
 [TestClass]
 public sealed class ShoppingListUnitTests
@@ -30,7 +30,7 @@ public sealed class ShoppingListUnitTests
             .Be(title)
             ;
     }
-    
+
     [TestMethod, DataRow(""), DataRow("   ")]
     public void Should_Not_Create_ShoppingList_with_Empty_Title(string title)
     {
@@ -46,7 +46,7 @@ public sealed class ShoppingListUnitTests
             .Throw<InvalidTitleException>()
             ;
     }
-    
+
     [TestMethod, DataRow(""), DataRow("   ")]
     public void Should_Not_Set_Empty_Title(string newTitle)
     {
