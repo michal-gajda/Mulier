@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <Folder Include="Ingredients\Validators\" />
+    <Folder Include="Integrations\NewFolder\" />
   </ItemGroup>
 
 </Project>
