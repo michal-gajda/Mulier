@@ -2,7 +2,7 @@
 
 using AutoMapper;
 using Mulier.Domain.Entities;
-using Mulier.Infrastructure.LiteDB.Models;
+using Mulier.Infrastructure.LiteDb.Models;
 
 internal sealed class ToDoDbEntityProfile : Profile
 {

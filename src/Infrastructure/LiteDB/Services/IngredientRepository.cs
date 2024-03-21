@@ -1,6 +1,7 @@
 namespace Mulier.Infrastructure.LiteDb.Services;
 
 using AutoMapper;
+using global::LiteDB;
 using Mulier.Domain.Entities;
 using Mulier.Domain.Interfaces;
 using Mulier.Infrastructure.LiteDb.Models;
@@ -17,7 +18,7 @@ internal sealed class IngredientRepository : IIngredientRepository
         var parts = new[]
         {
             new KeyValuePair<string, string>("Filename", options.FileName),
-            new KeyValuePair<string, string>("Connection", nameof(LiteDB.ConnectionType.Shared)),
+            new KeyValuePair<string, string>("Connection", nameof(ConnectionType.Shared)),
         };
 
         this.connectionString = string.Join(";", parts.Select(part => $"{part.Key}={part.Value}"));
@@ -25,7 +26,7 @@ internal sealed class IngredientRepository : IIngredientRepository
 
     public Task CreateAsync(IngredientEntity entity, CancellationToken cancellationToken = default)
     {
-        using var database = new LiteDB.LiteDatabase(this.connectionString);
+        using var database = new LiteDatabase(this.connectionString);
         var dbEntities = database.GetCollection<IngredientDbEntity>(nameof(IngredientDbEntity));
 
         var dbEntity = this.mapper.Map<IngredientDbEntity>(entity);
