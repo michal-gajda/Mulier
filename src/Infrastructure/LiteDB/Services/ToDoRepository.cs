@@ -38,7 +38,7 @@ internal sealed class ToDoRepository : IToDoRepository
 
     public Task DeleteAsync(ToDoId id, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 
     public Task<ToDoEntity?> ReadAsync(ToDoId id, CancellationToken cancellationToken = default)
