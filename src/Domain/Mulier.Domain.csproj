@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Using Include="Mulier.Domain.Enums" />
+    <Using Include="Mulier.Domain.Common.Constants" />
     <Using Include="Mulier.Domain.Types" />
   </ItemGroup>
 

@@ -10,6 +10,7 @@
     <Using Include="MediatR" />
     <Using Include="Microsoft.Extensions.Logging" />
     <Using Include="Mulier.Domain.Types" />
+    <Using Include="Mulier.Application.Common.Constants" />
     <Using Include="System.ComponentModel.DataAnnotations" />
     <Using Include="System.Text.Json.Serialization" />
   </ItemGroup>

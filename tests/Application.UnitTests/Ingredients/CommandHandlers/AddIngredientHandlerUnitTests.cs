@@ -1,9 +1,11 @@
 namespace Mulier.Application.UnitTests.Ingredients.CommandHandlers;
 
+using Microsoft.Extensions.Logging.Abstractions;
 using Mulier.Application.Ingredients.CommandHandlers;
 using Mulier.Application.Ingredients.Commands;
 using Mulier.Domain.Entities;
 using Mulier.Domain.Interfaces;
+using NSubstitute;
 
 [TestClass]
 public sealed class AddIngredientHandlerUnitTests
