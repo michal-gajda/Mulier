@@ -48,6 +48,6 @@ internal sealed class ToDoRepository : IToDoRepository
 
     public Task UpdateAsync(ToDoEntity entity, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 }
