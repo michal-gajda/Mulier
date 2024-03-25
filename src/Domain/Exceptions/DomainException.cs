@@ -6,6 +6,7 @@ public abstract class DomainException : Exception
     public Guid Id { get; protected set; } = Guid.Empty;
 
     protected DomainException(string message, Exception? innerException = default)
+        : base(message, innerException)
     {
     }
 }
