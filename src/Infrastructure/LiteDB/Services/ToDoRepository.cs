@@ -43,7 +43,7 @@ internal sealed class ToDoRepository : IToDoRepository
 
     public Task<ToDoEntity?> ReadAsync(ToDoId id, CancellationToken cancellationToken = default)
     {
-        throw new NotImplementedException();
+        return Task.FromResult((ToDoEntity?)default);
     }
 
     public Task UpdateAsync(ToDoEntity entity, CancellationToken cancellationToken = default)
