@@ -6,13 +6,10 @@ using Mulier.Domain.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-internal sealed class ExceptionHandler : IExceptionHandler
+internal sealed class ExceptionHandler(IProblemDetailsService service) : IExceptionHandler
 {
-    private readonly IProblemDetailsService service;
+    private readonly IProblemDetailsService problemDetailsService = service;
 
-    public ExceptionHandler(IProblemDetailsService service)
-        => this.service = service;
-    
     public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
     {
         var (statusCode, title) = exception switch
@@ -30,13 +27,13 @@ internal sealed class ExceptionHandler : IExceptionHandler
             Title = title,
             Detail = exception.Message,
         };
-        
+
         var problemDetailsContext = new ProblemDetailsContext
         {
             HttpContext = httpContext,
             ProblemDetails = problemDetails,
         };
-        
-        return await this.service.TryWriteAsync(problemDetailsContext);
+
+        return await this.problemDetailsService.TryWriteAsync(problemDetailsContext);
     }
 }
