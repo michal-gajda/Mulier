@@ -1,5 +1,3 @@
-using MediatR;
-
 namespace Mulier.Domain.Events;
 
 public sealed record class ShoppingListItemSelected : INotification
