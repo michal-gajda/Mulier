@@ -1,6 +1,7 @@
 namespace Mulier.Domain.Entities;
 
 using Mulier.Domain.Exceptions;
+using Mulier.Domain.Events;
 
 public sealed class ToDoEntity
 {
@@ -8,7 +9,9 @@ public sealed class ToDoEntity
 
     public ToDoId Id { get; private init; }
     public string Title { get; private set; } = string.Empty;
-
+    
+    private IList<IDomainEvent> events = new List<IDomainEvent>();
+    
     public ToDoEntity(ToDoId id, string title)
     {
         this.Id = id;
