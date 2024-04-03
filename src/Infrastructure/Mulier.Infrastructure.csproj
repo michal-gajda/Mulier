@@ -15,7 +15,7 @@
   <ItemGroup>
     <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
-    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.11" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.12" />
     <PackageReference Include="Hangfire.LiteDB" Version="0.4.1" />
     <PackageReference Include="LiteDB" Version="5.0.19" />
     <InternalsVisibleTo Include="Mulier.Infrastructure.UnitTests" />
