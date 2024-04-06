@@ -1,4 +1,4 @@
-﻿namespace Mulier.Application;
+namespace Mulier.Application;
 
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;

@@ -9,7 +9,7 @@ public sealed class ToDoEntity
 
     public ToDoId Id { get; private init; }
     public string Title { get; private set; } = string.Empty;
-    
+
     private IList<IDomainEvent> events = new List<IDomainEvent>();
 
     public ToDoEntity(ToDoId id, string title)
@@ -29,9 +29,9 @@ public sealed class ToDoEntity
         {
             Id = itemId,
         };
-        
+
         this.events.Add(@event);
-        
+
         this.items.Remove(itemId);
     }
 
@@ -43,7 +43,7 @@ public sealed class ToDoEntity
         {
             throw new InvalidTitleException(title);
         }
-        
+
         this.Title = title;
     }
 
@@ -56,9 +56,9 @@ public sealed class ToDoEntity
             ExpirationDateTime = entity.ExpirationDateTime,
             Title = entity.Title,
         };
-        
+
         this.events.Add(@event);
-        
+
         this.items[entity.Id] = entity;
     }
 }

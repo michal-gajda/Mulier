@@ -1,4 +1,4 @@
-﻿namespace Mulier.Infrastructure.LiteDB.Models;
+namespace Mulier.Infrastructure.LiteDB.Models;
 
 public class ToDoItemDbEntity
 {

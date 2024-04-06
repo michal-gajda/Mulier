@@ -1,4 +1,4 @@
-﻿namespace Mulier.Domain.Exceptions;
+namespace Mulier.Domain.Exceptions;
 
 public sealed class InvalidTitleException : DomainException
 {

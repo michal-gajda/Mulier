@@ -1,4 +1,4 @@
-﻿namespace Mulier.Application.Common.Exceptions;
+namespace Mulier.Application.Common.Exceptions;
 
 public sealed class ValidationException : ApplicationException
 {

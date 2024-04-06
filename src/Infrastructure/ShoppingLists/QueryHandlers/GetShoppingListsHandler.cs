@@ -12,7 +12,7 @@ internal sealed class GetShoppingListsHandler : IRequestHandler<GetShoppingLists
 
     public GetShoppingListsHandler(IMapper mapper, IShoppingListReadService readService)
         => (this.mapper, this.readService) = (mapper, readService);
-    
+
     public async Task<IEnumerable<ShoppingList>> Handle(GetShoppingLists request, CancellationToken cancellationToken)
     {
         var source = await this.readService.GetShoppingLists(cancellationToken);

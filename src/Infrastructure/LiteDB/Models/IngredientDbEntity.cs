@@ -1,4 +1,4 @@
-﻿namespace Mulier.Infrastructure.LiteDb.Models;
+namespace Mulier.Infrastructure.LiteDb.Models;
 
 using Mulier.Domain.Types;
 

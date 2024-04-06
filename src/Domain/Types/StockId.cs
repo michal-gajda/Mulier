@@ -1,4 +1,4 @@
-﻿namespace Mulier.Domain.Types;
+namespace Mulier.Domain.Types;
 
 public readonly record struct StockId
 {

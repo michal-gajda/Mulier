@@ -1,4 +1,4 @@
-﻿namespace Mulier.Domain.Events;
+namespace Mulier.Domain.Events;
 
 public sealed class ToDoItemRemoved : IDomainEvent
 {

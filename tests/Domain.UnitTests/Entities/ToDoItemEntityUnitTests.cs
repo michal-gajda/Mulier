@@ -1,4 +1,4 @@
-﻿namespace Mulier.Domain.UnitTests.Entities;
+namespace Mulier.Domain.UnitTests.Entities;
 
 using Mulier.Domain.Entities;
 

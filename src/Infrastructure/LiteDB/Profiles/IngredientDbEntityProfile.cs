@@ -1,4 +1,4 @@
-﻿namespace Mulier.Infrastructure.LiteDb.Profiles;
+namespace Mulier.Infrastructure.LiteDb.Profiles;
 
 using AutoMapper;
 using Mulier.Domain.Entities;

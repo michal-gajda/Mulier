@@ -1,4 +1,4 @@
-﻿namespace Mulier.Application.Integrations.Validators;
+namespace Mulier.Application.Integrations.Validators;
 
 using FluentValidation;
 using Mulier.Application.ToDos.Commands;

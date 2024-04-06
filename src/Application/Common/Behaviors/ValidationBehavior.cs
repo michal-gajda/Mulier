@@ -1,4 +1,4 @@
-﻿namespace Mulier.Application.Common.Behaviors;
+namespace Mulier.Application.Common.Behaviors;
 
 using FluentValidation;
 using ValidationException = System.ComponentModel.DataAnnotations.ValidationException;
