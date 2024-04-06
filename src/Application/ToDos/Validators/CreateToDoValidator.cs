@@ -20,7 +20,7 @@ internal sealed class CreateToDoValidator : AbstractValidator<CreateToDo>
             .WithErrorCode(DomainErrorCode.INVALID_TITLE);
     }
 
-    public async Task<bool> BeUniqueTitle(string title, CancellationToken cancellationToken = default)
+    private async Task<bool> BeUniqueTitle(string title, CancellationToken cancellationToken = default)
     {
         return await this.provider.IsUnique(title, cancellationToken);
     }
