@@ -8,6 +8,7 @@ using Mulier.Application.Common.Services;
 using Mulier.Application.ToDos.Interfaces;
 using Mulier.Application.ToDos.Services;
 
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public static class DependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
