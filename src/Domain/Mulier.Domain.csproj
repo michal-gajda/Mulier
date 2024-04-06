@@ -12,6 +12,10 @@
     <Using Include="Mulier.Domain.Types" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="MediatR.Contracts" />
   </ItemGroup>

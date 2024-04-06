@@ -19,6 +19,10 @@
     <InternalsVisibleTo Include="Mulier.Application.UnitTests" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="AutoMapper" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />

@@ -16,6 +16,10 @@
     <InternalsVisibleTo Include="Mulier.Infrastructure.UnitTests" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
     <PackageReference Include="Hangfire.AspNetCore" />
