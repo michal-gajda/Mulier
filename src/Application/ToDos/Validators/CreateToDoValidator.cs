@@ -1,7 +1,7 @@
 namespace Mulier.Application.ToDos.Validators;
 
 using FluentValidation;
-using Mulier.Application;
+using Mulier.Application.ToDos.Commands;
 using Mulier.Application.ToDos.Interfaces;
 using Mulier.Domain.Common.Constants;
 
