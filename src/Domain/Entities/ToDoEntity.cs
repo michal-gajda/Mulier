@@ -5,12 +5,11 @@ using Mulier.Domain.Exceptions;
 
 public sealed class ToDoEntity
 {
+    private readonly IList<IDomainEvent> events = new List<IDomainEvent>();
     private readonly Dictionary<ToDoItemId, ToDoItemEntity> items = new();
 
     public ToDoId Id { get; private init; }
     public string Title { get; private set; } = string.Empty;
-
-    private IList<IDomainEvent> events = new List<IDomainEvent>();
 
     public ToDoEntity(ToDoId id, string title)
     {
