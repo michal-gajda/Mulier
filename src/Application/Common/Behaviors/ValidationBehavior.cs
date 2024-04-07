@@ -1,7 +1,7 @@
 namespace Mulier.Application.Common.Behaviors;
 
 using FluentValidation;
-using ValidationException = System.ComponentModel.DataAnnotations.ValidationException;
+using ValidationException = Mulier.Application.Common.Exceptions.ValidationException;
 
 public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : notnull
