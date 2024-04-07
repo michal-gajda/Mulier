@@ -3,7 +3,7 @@ namespace Mulier.Application.Common.Behaviors;
 using FluentValidation;
 using ValidationException = Mulier.Application.Common.Exceptions.ValidationException;
 
-public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+public sealed class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : notnull
 {
     private readonly IEnumerable<IValidator<TRequest>> validators;
