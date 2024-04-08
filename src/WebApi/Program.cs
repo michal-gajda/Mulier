@@ -5,6 +5,17 @@ using Mulier.Infrastructure;
 using Mulier.WebApi;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddEnvironmentVariables();
+
+#if Linux
+builder.Host.UseSystemd();
+#endif
+#if Windows
+builder.Host.UseWindowsService(options =>
+{
+    options.ServiceName = ServiceConstants.ServiceName;
+});
+#endif
 
 builder.Services.AddHealthChecks();
 builder.Services.AddExceptionHandler<ExceptionHandler>();
