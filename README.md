@@ -20,3 +20,13 @@ services:
       - ./data:/app/data:z
     restart: unless-stopped
 ```
+
+```powershell
+dotnet tool install --global dotnet-format
+dotnet format Mulier.sln
+```
+
+```powershell
+dotnet tool install --global JetBrains.ReSharper.GlobalTools
+jb cleanupcode Mulier.sln --build
+```

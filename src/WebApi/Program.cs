@@ -3,6 +3,10 @@ using Mulier.Application;
 using Mulier.Application.ToDos.Commands;
 using Mulier.Infrastructure;
 using Mulier.WebApi;
+using OpenTelemetry.Logs;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddEnvironmentVariables();
@@ -16,6 +20,16 @@ builder.Host.UseWindowsService(options =>
     options.ServiceName = ServiceConstants.ServiceName;
 });
 #endif
+
+builder.Logging.AddOpenTelemetry(options => options
+    .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(ServiceConstants.ServiceName, serviceVersion: ServiceConstants.ServiceVersion))
+    .AddConsoleExporter()
+    .AddOtlpExporter()
+);
+builder.Services.AddOpenTelemetry()
+    .ConfigureResource(resource => resource.AddService(ServiceConstants.ServiceName, serviceVersion: ServiceConstants.ServiceVersion))
+    .WithTracing(tracing => tracing.AddAspNetCoreInstrumentation().AddConsoleExporter().AddOtlpExporter())
+    .WithMetrics(metrics => metrics.AddAspNetCoreInstrumentation().AddConsoleExporter().AddOtlpExporter());
 
 builder.Services.AddHealthChecks();
 builder.Services.AddExceptionHandler<ExceptionHandler>();
