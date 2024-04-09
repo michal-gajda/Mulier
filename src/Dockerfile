@@ -1,6 +1,9 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
+COPY Directory.Build.props.Dockerfile Directory.Build.props
+COPY Directory.Packages.props.Dockerfile Directory.Packages.props
+
 COPY Mulier.sln Mulier.sln
 COPY Domain/Mulier.Domain.csproj Domain/Mulier.Domain.csproj
 COPY Application/Mulier.Application.csproj Application/Mulier.Application.csproj
