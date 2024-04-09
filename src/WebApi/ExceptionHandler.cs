@@ -1,10 +1,10 @@
 namespace Mulier.WebApi;
 
 using System.Net;
-using Mulier.Application.Common.Exceptions;
-using Mulier.Domain.Exceptions;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Mulier.Application.Common.Exceptions;
+using Mulier.Domain.Exceptions;
 
 internal sealed class ExceptionHandler(IProblemDetailsService service) : IExceptionHandler
 {

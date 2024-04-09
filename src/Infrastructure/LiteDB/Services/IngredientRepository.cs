@@ -37,12 +37,8 @@ internal sealed class IngredientRepository : IIngredientRepository
     }
 
     public Task<IngredientEntity?> ReadAsync(IngredientId id, CancellationToken cancellationToken = default)
-    {
-        return Task.FromResult((IngredientEntity?)default);
-    }
+        => Task.FromResult((IngredientEntity?)default);
 
     public Task UpdateAsync(IngredientEntity entity, CancellationToken cancellationToken = default)
-    {
-        return Task.CompletedTask;
-    }
+        => Task.CompletedTask;
 }

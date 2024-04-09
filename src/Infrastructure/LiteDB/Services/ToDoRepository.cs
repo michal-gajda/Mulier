@@ -37,17 +37,11 @@ internal sealed class ToDoRepository : IToDoRepository
     }
 
     public Task DeleteAsync(ToDoId id, CancellationToken cancellationToken = default)
-    {
-        return Task.CompletedTask;
-    }
+        => Task.CompletedTask;
 
     public Task<ToDoEntity?> ReadAsync(ToDoId id, CancellationToken cancellationToken = default)
-    {
-        return Task.FromResult((ToDoEntity?)default);
-    }
+        => Task.FromResult((ToDoEntity?)default);
 
     public Task UpdateAsync(ToDoEntity entity, CancellationToken cancellationToken = default)
-    {
-        return Task.CompletedTask;
-    }
+        => Task.CompletedTask;
 }

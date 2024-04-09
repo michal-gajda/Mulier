@@ -1,18 +1,19 @@
-using Microsoft.AspNetCore.Builder;
-using Mulier.Infrastructure.Hangfire;
-
 namespace Mulier.Infrastructure;
 
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Mulier.Infrastructure.Hangfire;
 using Mulier.Infrastructure.LiteDb;
 
-[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[ExcludeFromCodeCoverage]
 public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+        var assembly = Assembly.GetExecutingAssembly();
         services.AddAutoMapper(assembly);
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
 
@@ -22,7 +23,5 @@ public static class DependencyInjection
     }
 
     public static void UseInfrastructure(this IApplicationBuilder app)
-    {
-        app.UseHangfire();
-    }
+        => app.UseHangfire();
 }

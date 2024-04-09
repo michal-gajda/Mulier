@@ -1,13 +1,12 @@
 namespace Mulier.Infrastructure.ShoppingLists.Profiles;
 
+using AutoMapper;
 using Source = Mulier.Infrastructure.ShoppingLists.Models.ShoppingListDbEntity;
 using Target = Mulier.Application.ShoppingLists.ViewModels.ShoppingList;
 
-internal sealed class ShoppingListProfile : AutoMapper.Profile
+internal sealed class ShoppingListProfile : Profile
 {
     public ShoppingListProfile()
-    {
-        base.CreateMap<Source, Target>()
+        => CreateMap<Source, Target>()
             .ReverseMap();
-    }
 }

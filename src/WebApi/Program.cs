@@ -26,6 +26,7 @@ builder.Logging.AddOpenTelemetry(options => options
     .AddConsoleExporter()
     .AddOtlpExporter()
 );
+
 builder.Services.AddOpenTelemetry()
     .ConfigureResource(resource => resource.AddService(ServiceConstants.ServiceName, serviceVersion: ServiceConstants.ServiceVersion))
     .WithTracing(tracing => tracing.AddAspNetCoreInstrumentation().AddConsoleExporter().AddOtlpExporter())

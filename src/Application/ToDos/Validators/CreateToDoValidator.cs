@@ -21,7 +21,5 @@ internal sealed class CreateToDoValidator : AbstractValidator<CreateToDo>
     }
 
     private async Task<bool> BeUniqueTitle(string title, CancellationToken cancellationToken = default)
-    {
-        return await this.provider.IsUnique(title, cancellationToken);
-    }
+        => await this.provider.IsUnique(title, cancellationToken);
 }

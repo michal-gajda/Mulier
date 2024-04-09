@@ -1,11 +1,12 @@
 namespace Mulier.Infrastructure.LiteDb;
 
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Mulier.Domain.Interfaces;
 using Mulier.Infrastructure.LiteDb.Services;
 
-[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[ExcludeFromCodeCoverage]
 public static class DependencyInjection
 {
     public static IServiceCollection AddLiteDb(this IServiceCollection services, IConfiguration configuration)

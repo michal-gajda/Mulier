@@ -24,7 +24,7 @@ public sealed class ToDoEntity
             throw new ToDoItemNotFoundException(itemId);
         }
 
-        var @event = new ToDoItemRemoved()
+        var @event = new ToDoItemRemoved
         {
             Id = itemId,
         };

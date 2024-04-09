@@ -7,12 +7,9 @@ using Mulier.Infrastructure.LiteDb.Models;
 internal sealed class ToDoDbEntityProfile : Profile
 {
     public ToDoDbEntityProfile()
-    {
-        CreateMap<ToDoEntity, ToDoDbEntity>()
+        => CreateMap<ToDoEntity, ToDoDbEntity>()
             .ForMember(target => target.Id,
                 opt => opt.MapFrom(source => source.Id))
             .ForMember(target => target.Title,
-                opt => opt.MapFrom(source => source.Title))
-            ;
-    }
+                opt => opt.MapFrom(source => source.Title));
 }

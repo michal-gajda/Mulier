@@ -29,7 +29,5 @@ public sealed class ShoppingListEntity
     }
 
     public void UpsertItem(ShoppingListItemEntity item)
-    {
-        this.items[item.Id] = item;
-    }
+        => this.items[item.Id] = item;
 }
