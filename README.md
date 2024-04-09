@@ -30,3 +30,5 @@ dotnet format Mulier.sln
 dotnet tool install --global JetBrains.ReSharper.GlobalTools
 jb cleanupcode Mulier.sln --build
 ```
+
+### WPF Client?
