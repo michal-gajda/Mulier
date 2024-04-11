@@ -33,4 +33,6 @@ jb cleanupcode Mulier.sln --build
 
 ### WPF Client?
 
+#### Proxy in client
+
 ### KISS, DRY, YAGNI, TDA, SOC, DEMETER, SOLID
