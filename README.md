@@ -31,6 +31,34 @@ dotnet tool install --global JetBrains.ReSharper.GlobalTools
 jb cleanupcode Mulier.sln --build
 ```
 
+### SonarQube
+
+```yaml
+volumes:
+  sonar-storage-data:
+    name: sonar-storage-data
+    driver: local
+  sonar-storage-logs:
+    name: sonar-storage-logs
+    driver: local
+services:
+  sonarqube:
+    image: sonarqube:latest
+    container_name: sonarqube
+    ports:
+      - "${SONAR_HTTP_PORT:-9000}:9000"
+    volumes:
+      - sonar-storage-data:/opt/sonarqube/data
+      - sonar-storage-logs:/opt/sonarqube/logs
+```
+
+```powershell
+dotnet sonarscanner begin /k:"Mulier" /d:sonar.token="TOKEN" /d:"sonar.host.url=http://localhost:9000" /d:sonar.cs.vscoveragexml.reportsPaths="coverage.xml"
+dotnet build --no-incremental
+dotnet-coverage collect "dotnet test" --output-format xml --output "coverage.xml"
+dotnet sonarscanner end /d:sonar.token="TOKEN"
+```
+
 ### WPF Client?
 
 #### Proxy in client
