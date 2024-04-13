@@ -486,3 +486,5 @@ $RECYCLE.BIN/
 # DATA
 */data/*
 
+# SonarScanner/SonarQube
+*/.sonarqube/
