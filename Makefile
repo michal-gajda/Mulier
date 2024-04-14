@@ -1,5 +1,5 @@
 sln = Mulier.sln
-token = sqp_a55e0efe1dae0d2e9792809e671051f45a2e21a3
+token = TOKEN
 sonarqube = http://sonarqube.gajda.co.uk/
 
 all:
