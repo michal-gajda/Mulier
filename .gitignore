@@ -488,3 +488,7 @@ $RECYCLE.BIN/
 
 # SonarScanner/SonarQube
 */.sonarqube/
+
+# MacOS
+.mono/*
+*/.mono/*
