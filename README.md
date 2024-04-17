@@ -59,6 +59,8 @@ dotnet-coverage collect "dotnet test" --output-format xml --output "coverage.xml
 dotnet sonarscanner end /d:sonar.token="TOKEN"
 ```
 
+### Blazor WASM
+
 ### WPF Client?
 
 #### Proxy in client
