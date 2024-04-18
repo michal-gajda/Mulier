@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Mulier.Domain.csproj" />
+    <ProjectReference Include="..\Shared\Mulier.Shared.csproj" />
   </ItemGroup>
 
 </Project>
