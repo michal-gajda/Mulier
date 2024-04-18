@@ -11,5 +11,6 @@ internal sealed class ToDoDbEntityProfile : Profile
             .ForMember(target => target.Id,
                 opt => opt.MapFrom(source => source.Id))
             .ForMember(target => target.Title,
-                opt => opt.MapFrom(source => source.Title));
+                opt => opt.MapFrom(source => source.Title))
+            .ReverseMap();
 }
