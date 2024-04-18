@@ -4,7 +4,7 @@ using AutoMapper;
 using Mulier.Infrastructure.LiteDb.Models;
 using Mulier.Infrastructure.LiteDb.Profiles;
 
-[TestClass]
+[RestrictToString(false), TestClass]
 public sealed class ToDoEntityProfileUnitTests
 {
     [TestMethod]

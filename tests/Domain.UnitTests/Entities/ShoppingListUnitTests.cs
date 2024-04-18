@@ -3,7 +3,7 @@ namespace Mulier.Domain.UnitTests.Entities;
 using Mulier.Domain.Entities;
 using Mulier.Domain.Exceptions;
 
-[TestClass]
+[RestrictToString(false), TestClass]
 public sealed class ShoppingListUnitTests
 {
     [TestMethod]

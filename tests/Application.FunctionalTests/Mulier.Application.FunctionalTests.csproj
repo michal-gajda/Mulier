@@ -11,6 +11,7 @@
     <Using Include="Microsoft.Extensions.Configuration" />
     <Using Include="Microsoft.Extensions.DependencyInjection" />
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+    <Using Include="NCrunch.Framework" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +26,7 @@
     </PackageReference>
     <PackageReference Include="MSTest.TestAdapter" />
     <PackageReference Include="MSTest.TestFramework" />
+    <PackageReference Include="NCrunch.Framework" />
   </ItemGroup>
 
   <ItemGroup>

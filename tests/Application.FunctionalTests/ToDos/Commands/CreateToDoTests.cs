@@ -5,7 +5,7 @@ using Mulier.Domain.Interfaces;
 using Mulier.Domain.Types;
 using Mulier.Infrastructure;
 
-[TestClass]
+[RestrictToString(false), TestClass]
 public sealed class CreateToDoTests
 {
     private static readonly Guid ID = Guid.NewGuid();

@@ -2,7 +2,7 @@ namespace Mulier.Domain.UnitTests.Entities;
 
 using Mulier.Domain.Entities;
 
-[TestClass]
+[RestrictToString(false), TestClass]
 public sealed class ToDoItemEntityUnitTests
 {
     [TestMethod]

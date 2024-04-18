@@ -10,6 +10,7 @@
     <Using Include="Microsoft.Extensions.Logging.Abstractions" />
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
     <Using Include="Mulier.Domain.Types" />
+    <Using Include="NCrunch.Framework" />
     <Using Include="NSubstitute" />
   </ItemGroup>
 
@@ -26,6 +27,7 @@
     </PackageReference>
     <PackageReference Include="MSTest.TestAdapter" />
     <PackageReference Include="MSTest.TestFramework" />
+    <PackageReference Include="NCrunch.Framework" />
     <PackageReference Include="NSubstitute" />
     <PackageReference Include="NSubstitute.Analyzers.CSharp">
       <PrivateAssets>all</PrivateAssets>

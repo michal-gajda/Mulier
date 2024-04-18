@@ -5,7 +5,7 @@ using Mulier.Domain.Entities;
 using Mulier.Infrastructure.LiteDb.Models;
 using Mulier.Infrastructure.LiteDb.Profiles;
 
-[TestClass]
+[RestrictToString(false), TestClass]
 public sealed class IngredientDbEntityProfileUnitTests
 {
     [TestMethod]
