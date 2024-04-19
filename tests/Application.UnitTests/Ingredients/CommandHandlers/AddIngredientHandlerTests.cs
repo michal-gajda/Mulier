@@ -6,7 +6,7 @@ using Mulier.Domain.Entities;
 using Mulier.Domain.Interfaces;
 
 [RestrictToString(false), TestClass]
-public sealed class AddIngredientHandlerUnitTests
+public sealed class AddIngredientHandlerTests
 {
     [TestMethod]
     public async Task Should_Add_Ingredient_to_Repository()

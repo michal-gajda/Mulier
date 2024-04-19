@@ -27,6 +27,9 @@
     <PackageReference Include="MSTest.TestAdapter" />
     <PackageReference Include="MSTest.TestFramework" />
     <PackageReference Include="NCrunch.Framework" />
+    <PackageReference Include="SpecFlow" />
+    <PackageReference Include="SpecFlow.MsTest" />
+    <PackageReference Include="System.Text.RegularExpressions" />
   </ItemGroup>
 
   <ItemGroup>
