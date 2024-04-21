@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Mulier.Infrastructure.Hangfire;
 using Mulier.Infrastructure.LiteDb;
+using Mulier.Infrastructure.MassTransit;
 
 [ExcludeFromCodeCoverage]
 public static class DependencyInjection
@@ -17,7 +18,9 @@ public static class DependencyInjection
         services.AddAutoMapper(assembly);
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
 
+        services.AddHangfire(configuration);
         services.AddLiteDb(configuration);
+        services.AddMassTransit(configuration);
 
         return services;
     }

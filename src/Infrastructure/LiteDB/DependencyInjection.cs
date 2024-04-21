@@ -7,7 +7,7 @@ using Mulier.Domain.Interfaces;
 using Mulier.Infrastructure.LiteDb.Services;
 
 [ExcludeFromCodeCoverage]
-public static class DependencyInjection
+internal static class DependencyInjection
 {
     public static IServiceCollection AddLiteDb(this IServiceCollection services, IConfiguration configuration)
     {
