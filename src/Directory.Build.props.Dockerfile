@@ -12,6 +12,10 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <NoWarn>S2094;</NoWarn>
   </PropertyGroup>
 
