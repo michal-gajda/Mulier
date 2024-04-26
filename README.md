@@ -65,4 +65,4 @@ dotnet sonarscanner end /d:sonar.token="TOKEN"
 
 #### Proxy in client
 
-### KISS, DRY, YAGNI, TDA, SOC, DEMETER, SOLID
+### KISS, DRY, YAGNI, TDA, SOC, DEMETER, SOLID, Design Pattern
