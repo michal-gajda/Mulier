@@ -3,7 +3,9 @@ networks:
     driver: bridge
 services:
   hermes:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: mulier:local
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
