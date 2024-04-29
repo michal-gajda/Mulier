@@ -48,8 +48,8 @@ namespace Mulier.Application.FunctionalTests
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "CreateToDo", "    In order to manage my tasks\r\n    As a user\r\n    I want to be able to create a" +
-                    " new ToDo item", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "CreateToDo", "    In order to manage my tasks\n    As a user\n    I want to be able to create a n" +
+                    "ew ToDo item", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
