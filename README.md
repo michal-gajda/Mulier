@@ -61,6 +61,8 @@ dotnet sonarscanner end /d:sonar.token="TOKEN"
 
 ### Blazor WASM
 
+### API
+
 ### WPF Client?
 
 #### Proxy in client
