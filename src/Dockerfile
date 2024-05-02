@@ -9,6 +9,9 @@ COPY Domain/Mulier.Domain.csproj Domain/Mulier.Domain.csproj
 COPY Application/Mulier.Application.csproj Application/Mulier.Application.csproj
 COPY Infrastructure/Mulier.Infrastructure.csproj Infrastructure/Mulier.Infrastructure.csproj
 COPY WebApi/Mulier.WebApi.csproj WebApi/Mulier.WebApi.csproj
+COPY Web/Mulier.Web.csproj Web/Mulier.Web.csproj
+COPY WebUI/Mulier.WebUI.csproj WebUI/Mulier.WebUI.csproj
+COPY Shared/Mulier.Shared.csproj Shared/Mulier.Shared.csproj
 RUN dotnet restore
 
 COPY . .
