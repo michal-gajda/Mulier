@@ -26,6 +26,7 @@
     <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageVersion Include="MongoDB.EntityFrameworkCore" Version="8.0.0" />
     <PackageVersion Include="MSTest.Analyzers" Version="3.3.1" />
     <PackageVersion Include="MSTest.TestAdapter" Version="3.3.1" />
     <PackageVersion Include="MSTest.TestFramework" Version="3.3.1" />

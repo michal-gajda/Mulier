@@ -26,6 +26,7 @@
     <PackageReference Include="Hangfire.LiteDB" />
     <PackageReference Include="LiteDB" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
+    <PackageReference Include="MongoDB.EntityFrameworkCore" />
     <PackageReference Include="Newtonsoft.Json" />
     <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
     <PackageReference Include="OpenTelemetry.Instrumentation.Http" />
