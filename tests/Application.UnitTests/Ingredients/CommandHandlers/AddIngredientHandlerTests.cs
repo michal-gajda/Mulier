@@ -1,5 +1,6 @@
 namespace Mulier.Application.UnitTests.Ingredients.CommandHandlers;
 
+using MediatR;
 using Mulier.Application.Ingredients.CommandHandlers;
 using Mulier.Application.Ingredients.Commands;
 using Mulier.Domain.Entities;
@@ -13,8 +14,9 @@ public sealed class AddIngredientHandlerTests
     {
         // Arrange
         var logger = new NullLogger<AddIngredientHandler>();
+        var mediator = Substitute.For<IPublisher>();
         var sut = Substitute.For<IIngredientRepository>();
-        var handler = new AddIngredientHandler(logger, sut);
+        var handler = new AddIngredientHandler(logger, mediator, sut);
 
         var id = Guid.NewGuid();
         var name = "name";
