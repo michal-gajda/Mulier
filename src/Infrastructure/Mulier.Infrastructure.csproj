@@ -25,6 +25,7 @@
     <PackageReference Include="Hangfire.AspNetCore" />
     <PackageReference Include="Hangfire.LiteDB" />
     <PackageReference Include="LiteDB" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" />
     <PackageReference Include="MongoDB.EntityFrameworkCore" />
     <PackageReference Include="Newtonsoft.Json" />

@@ -1,6 +1,5 @@
 namespace Mulier.Application.UnitTests.Ingredients.CommandHandlers;
 
-using MediatR;
 using Mulier.Application.Ingredients.CommandHandlers;
 using Mulier.Application.Ingredients.Commands;
 using Mulier.Domain.Entities;

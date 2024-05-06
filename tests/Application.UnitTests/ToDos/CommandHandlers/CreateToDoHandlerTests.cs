@@ -1,6 +1,5 @@
 namespace Mulier.Application.UnitTests.ToDos.CommandHandlers;
 
-using MediatR;
 using Mulier.Application.ToDos.CommandHandlers;
 using Mulier.Application.ToDos.Commands;
 using Mulier.Domain.Entities;
@@ -31,7 +30,8 @@ public sealed class CreateToDoHandlerTests
 
         // Assert
         await sut
-            .Received(1)
-            .CreateAsync(Arg.Any<ToDoEntity>(), Arg.Any<CancellationToken>());
+                .Received(1)
+                .CreateAsync(Arg.Any<ToDoEntity>(), Arg.Any<CancellationToken>())
+            ;
     }
 }

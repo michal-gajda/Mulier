@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Using Include="MediatR" />
     <Using Include="Microsoft.Extensions.Logging.Abstractions" />
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
     <Using Include="NCrunch.Framework" />

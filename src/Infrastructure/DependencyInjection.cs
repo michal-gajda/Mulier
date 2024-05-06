@@ -5,6 +5,7 @@ using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Mulier.Infrastructure.EntityFrameworkCore;
 using Mulier.Infrastructure.Hangfire;
 using Mulier.Infrastructure.LiteDb;
 using Mulier.Infrastructure.MassTransit;
@@ -20,6 +21,7 @@ public static class DependencyInjection
 
         services.AddHangfire(configuration);
         services.AddLiteDb(configuration);
+        services.AddEntityFrameworkCore(configuration);
         services.AddMassTransit(configuration);
 
         return services;
