@@ -10,7 +10,7 @@ internal static class DependencyInjection
 {
     public static IServiceCollection AddEntityFrameworkCore(this IServiceCollection services, IConfiguration configuration)
     {
-        var connectionString = configuration.GetConnectionString("")!;
+        var connectionString = configuration.GetConnectionString("DefaultConnection")!;
 
         services.AddDbContext<MulierDbContext>(options => options.UseMongoDB(connectionString, "Mulier"));
 
