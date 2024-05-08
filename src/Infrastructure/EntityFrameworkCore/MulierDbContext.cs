@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using MongoDB.EntityFrameworkCore.Extensions;
 using Mulier.Infrastructure.EntityFrameworkCore.Models;
 
-internal class MulierDbContext : DbContext
+internal sealed class MulierDbContext : DbContext
 {
     public DbSet<IngredientDbEntity> Ingredients { get; init; }
 
