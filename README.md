@@ -41,6 +41,7 @@ volumes:
   sonar-storage-logs:
     name: sonar-storage-logs
     driver: local
+
 services:
   sonarqube:
     image: sonarqube:latest
