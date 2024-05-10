@@ -64,6 +64,8 @@ dotnet sonarscanner end /d:sonar.token="TOKEN"
 
 ### API
 
+Swagger
+
 ### WPF Client?
 
 #### Proxy in client
