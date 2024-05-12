@@ -31,7 +31,7 @@ dotnet tool install --global JetBrains.ReSharper.GlobalTools
 jb cleanupcode Mulier.sln --build
 ```
 
-### SonarQube
+### SonarQube/SonarCloud
 
 ```yaml
 volumes:
