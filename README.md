@@ -63,7 +63,7 @@ dotnet sonarscanner end /d:sonar.token="TOKEN"
 
 ### API
 
-Swagger
+Swagger/HC
 
 ### WPF Client?
 
