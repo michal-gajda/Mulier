@@ -51,7 +51,7 @@
     <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.8.1" />
     <PackageVersion Include="SpecFlow" Version="3.9.74" />
     <PackageVersion Include="SpecFlow.MsTest" Version="3.9.74" />
-    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.6.2" />
     <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1" />
     <PackageVersion Include="Yarp.ReverseProxy" Version="2.1.0" />
   </ItemGroup>
