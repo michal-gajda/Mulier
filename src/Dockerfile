@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 COPY Directory.Build.props.Dockerfile Directory.Build.props
@@ -19,7 +19,7 @@ COPY . .
 RUN dotnet build WebApi/Mulier.WebApi.csproj --configuration Release
 RUN dotnet publish WebApi/Mulier.WebApi.csproj --configuration Release --output /app/build
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM mcr.microsoft.com/dotnet/aspnet:10.0
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y curl=7.88.1-10+deb12u5 --no-install-recommends && rm -rf /var/lib/apt/lists/*
